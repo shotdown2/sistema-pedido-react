@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import './App.css';
 import MenuSuperior from './components/MenuSuperior/MenuSuperior';
 import Categoria from './components/Categoria/Categoria';
 import Produto from './components/Produto/Produto';
+import Login from './components/Login/Login';
 import { Switch, Route } from 'react-router-dom';
+import './css/login.css';
 
 class App extends Component {
   render() {
@@ -14,7 +15,8 @@ class App extends Component {
           <div className="row">
             <div className="col">
               <Switch>
-                <Route path="/" exact component= {Categoria} />
+                <Route path="/" exact component= {Login} />
+                <Route path="/login" component= {Login} />
                 <Route path="/produtos" component= {Produto} />
                 <Route path="/categorias" component= {Categoria} />
               </Switch>
